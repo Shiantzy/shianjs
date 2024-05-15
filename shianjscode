@@ -1,0 +1,39 @@
+const NFTs = [] 
+
+function mintNFT (name,height,age,gender) {
+    const NFT = {
+        "name": name,
+        "height": height,
+        "age": age,
+        "gender": gender,
+    }
+
+    NFTs.push(NFT);
+
+    console.log("Minted: " + name);
+
+}
+
+function listNFTs(){    
+    for(let i=0; i < NFTs.length; i++){
+        console.log("\nID: " + (i + 1));
+        console.log("Name: " + NFTs[i].name);
+        console.log("Height: " + NFTs[i].height);
+        console.log("Age: " + NFTs[i].age);
+        console.log("Gender: " + NFTs[i].gender);
+        
+    }
+}
+
+function getTotalSupply(){
+    console.log("\n" + NFTs.length);
+}
+
+
+mintNFT("Christian", "5,8","21", "Male");
+mintNFT("Shian", "5,7","12", "Male");
+mintNFT("Cathleen", "4,11","19", "Female");
+mintNFT("Gab", "5,5","20", "Male");
+mintNFT("Paul", "5,9","20", "Male");
+listNFTs();
+getTotalSupply();
